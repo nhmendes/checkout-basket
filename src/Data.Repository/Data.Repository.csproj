@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>BasketService.Data.Repository</AssemblyName>
+    <RootNamespace>BasketService.Data.Repository</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.8.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj" />
+    <ProjectReference Include="..\Domain.Model\Domain.Model.csproj" />
+    <ProjectReference Include="..\Infrastructure.CrossCutting\Infrastructure.CrossCutting.csproj" />
+  </ItemGroup>
+
+</Project>

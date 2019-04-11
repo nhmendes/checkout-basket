@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>BasketService.Tests.Common</AssemblyName>
+    <RootNamespace>BasketService.Tests.Common</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests.Common\**" />
+    <EmbeddedResource Remove="Tests.Common\**" />
+    <None Remove="Tests.Common\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.CrossCutting\Infrastructure.CrossCutting.csproj" />
+  </ItemGroup>
+
+</Project>

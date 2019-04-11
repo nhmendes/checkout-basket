@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>BasketService.Client.Sdk</id>
+    <version>$version$</version>
+    <title>Basket Service Client</title>
+    <authors>Nuno Mendes</authors>
+    <owners>Nuno Mendes</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Basket Service Client .NET Standard SDK</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>BasketsService netstandard2.0</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="NETStandard.Library" version="2.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\BasketService.Application.DTO.dll" target="lib\netstandard2.0" />
+    <file src="bin\Release\netstandard2.0\BasketService.Client.dll" target="lib\netstandard2.0" />
+  </files>
+</package>

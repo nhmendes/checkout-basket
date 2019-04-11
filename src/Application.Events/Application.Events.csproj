@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>BasketService.Service.Application.Events</AssemblyName>
+    <RootNamespace>BasketService.Service.Application.Events</RootNamespace>
+  </PropertyGroup>
+
+</Project>

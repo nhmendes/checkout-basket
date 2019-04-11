@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>BasketService.Domain.Core</AssemblyName>
+    <RootNamespace>BasketService.Domain.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Model\Domain.Model.csproj" />
+    <ProjectReference Include="..\Infrastructure.CrossCutting\Infrastructure.CrossCutting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="GatewayInterfaces\" />
+  </ItemGroup>
+
+</Project>

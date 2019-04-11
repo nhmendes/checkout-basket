@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>BasketService.Infrastructure.CrossCutting</AssemblyName>
+    <RootNamespace>BasketService.Infrastructure.CrossCutting</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Adapters\**" />
+    <Compile Remove="Converters\**" />
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="SourceConfiguration\**" />
+    <EmbeddedResource Remove="Adapters\**" />
+    <EmbeddedResource Remove="Converters\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="SourceConfiguration\**" />
+    <None Remove="Adapters\**" />
+    <None Remove="Converters\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="SourceConfiguration\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Configuration\DocPersistenceSettings.cs" />
+    <Compile Remove="Configuration\IDocPersistenceSettings.cs" />
+    <Compile Remove="Configuration\ILanguageServiceSettings.cs" />
+    <Compile Remove="Configuration\IMongoDbSettings.cs" />
+    <Compile Remove="Configuration\LanguageServiceSettings.cs" />
+    <Compile Remove="Configuration\MongoDBSettings.cs" />
+    <Compile Remove="Exceptions\FileTypeNotAllowedException.cs" />
+    <Compile Remove="Exceptions\MaxFileSizeExceededException.cs" />
+    <Compile Remove="Exceptions\MissingFieldsException.cs" />
+    <Compile Remove="Exceptions\NoResultsFoundException.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
