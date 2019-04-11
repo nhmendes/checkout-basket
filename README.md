@@ -1,29 +1,29 @@
 
-## checkout-basket-service
+# checkout-basket-service
 
 This API will allow our users to set up and manage an order of items.
 The API will allow users to add and remove items and change the quantity of the items they want.
 They should also be able to simply clear out all items from their order and start again.
 
-## API
+# API
 
-# Basket Authorization
+## Basket Authorization
 
 GET /BasketAuthorization/connect/token
 
-# Baskets
+## Baskets
 - GET /Baskets
 - POST /Baskets
 - GET /Baskets/{basketId}
 - DELETE /Baskets/{basketId}
 
-# Basket Items
+## Basket Items
 - GET /BasketItems/{basketId}/items/{itemId}
 - DELETE /BasketItems/{basketId}/items/{itemId}
 - PATCH /BasketItems/{basketId}/items/{itemId}
 - POST /BasketItems/{basketId}/items
 
-## Usage
+# Usage
 
 This API requires jwt authorization. To be able to call methods in this API one must first call `GET  /BasketAuthorization/connect/token` in order to get a authorization token. Then send it in the request headers:
 
@@ -42,11 +42,11 @@ var httpConn = new HttpConnection(uri, headers);
 var client = new BasketsClient(httpConn);
 ```
 
-## License
+# License
 ISC
 
 
-## Contributing
+# Contributing
 
 This is our suggestion on how you should go about proposing changes to this project:
 
