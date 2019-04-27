@@ -29,9 +29,9 @@ ResponseModel "1" *-down- UseCase
 
 DomainModel "1" *-up- UseCase
 
-Gateway "1" *-up- DomainModel
-Repository "1" *-up- DomainModel
-Publisher "1" *-up- DomainModel
+DomainModel "1" *-up- Gateway
+DomainModel "1" *-up- Repository
+DomainModel "1" *-up- Publisher
 
 Gateway <|-down- GatewayImpl: Inheritance
 Repository <|-down- RepositoryImpl: Inheritance
