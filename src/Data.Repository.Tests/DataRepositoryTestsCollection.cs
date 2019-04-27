@@ -1,7 +1,6 @@
-﻿namespace Farfetch.ReturnContestsService.Data.Repository.Tests
+﻿namespace BasketService.Data.Repository.Tests
 {
     using System.Diagnostics.CodeAnalysis;
-    using Farfetch.ReturnContestsService.Tests.Common;
     using Xunit;
 
     [ExcludeFromCodeCoverage]

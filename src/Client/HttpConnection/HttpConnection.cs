@@ -22,7 +22,7 @@
 
         public async Task<T> GetAsync<T>(Uri uri)
         {
-            T result = default;
+            T result = default(T);
 
             using (var client = new HttpClient())
             {
@@ -48,7 +48,7 @@
 
         public async Task<TResponse> PostAsync<TBody, TResponse>(Uri uri, TBody body)
         {
-            TResponse result = default;
+            TResponse result = default(TResponse);
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(this.baseAddress);

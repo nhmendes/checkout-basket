@@ -10,6 +10,6 @@
     <description>Baskets Service REST API</description>
   </metadata>
   <files>
-    <file src="bin\Release\netcoreapp2.0\publish\**\*.*" target="" exclude="**\*.pdb;**\*appsettings.*.json" />
+    <file src="bin\Release\netcoreapp2.2\publish\**\*.*" target="" exclude="**\*.pdb;**\*appsettings.*.json" />
   </files>
 </package>

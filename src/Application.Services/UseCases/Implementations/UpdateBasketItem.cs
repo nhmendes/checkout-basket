@@ -44,10 +44,11 @@
 
         private async Task PublishBasketItemUpdated(Item domainItem)
         {
-            this.logger.Info("BasketItemUpdated", () =>
-            {
-                return domainItem;
-            });
+            await Task.Run(() =>
+                this.logger.Info("BasketItemUpdated", () =>
+                {
+                    return domainItem;
+                }));
         }
     }
 }

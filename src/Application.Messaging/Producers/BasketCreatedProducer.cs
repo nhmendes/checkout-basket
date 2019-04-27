@@ -15,7 +15,7 @@
 
         public async Task ProduceBasketCreatedEventAsync(string basketId)
         {
-            this.logger.Info($"basket created:{basketId}");
+            await Task.Run(() => this.logger.Info($"basket created:{basketId}"));
         }
     }
 }

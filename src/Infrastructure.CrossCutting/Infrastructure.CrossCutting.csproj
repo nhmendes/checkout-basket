@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <AssemblyName>BasketService.Infrastructure.CrossCutting</AssemblyName>
     <RootNamespace>BasketService.Infrastructure.CrossCutting</RootNamespace>
   </PropertyGroup>
@@ -32,10 +32,6 @@
     <Compile Remove="Exceptions\MaxFileSizeExceededException.cs" />
     <Compile Remove="Exceptions\MissingFieldsException.cs" />
     <Compile Remove="Exceptions\NoResultsFoundException.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

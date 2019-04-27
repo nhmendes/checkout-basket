@@ -15,7 +15,7 @@
 
         public async Task ProduceBasketDeletedEventAsync(string basketId)
         {
-            this.logger.Info($"basket deleted:{basketId}");
+            await Task.Run(() => this.logger.Info($"basket deleted:{basketId}"));
         }
     }
 }

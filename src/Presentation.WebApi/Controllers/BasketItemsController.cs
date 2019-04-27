@@ -9,7 +9,6 @@
     using BasketService.Infrastructure.CrossCutting.Logging;
     using Microsoft.AspNetCore.JsonPatch;
     using Microsoft.AspNetCore.Mvc;
-    using Swashbuckle.Swagger.Annotations;
 
     [Route("[controller]")]
     public class BasketItemsController : ControllerBase
@@ -43,11 +42,8 @@
 
         [HttpDelete]
         [Route("{basketId}/items/{itemId}")]
-        [SwaggerResponse(204, "No Content")]
-        [SwaggerResponse(400, "Bad Request", typeof(ApiError))]
-        [SwaggerResponse(401, "Unauthorized", typeof(ApiError))]
-        [SwaggerResponse(404, "Not Found")]
-        [SwaggerResponse(500, "Internal Server Error", typeof(ApiError))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> DeleteBasketItemById(string basketId, string itemId)
         {
             try
@@ -60,7 +56,7 @@
                 await this.deleteBasketItem
                     .Execute(DeleteBasketItemRequest.Create(basketId, itemId));
 
-                return Ok();
+                return NoContent();
             }
             catch (Exception e)
             {
@@ -71,8 +67,8 @@
 
         [HttpPost]
         [Route("{basketId}/items")]
-        [SwaggerResponse(200, "Ok", typeof(Item))]
-        [SwaggerResponse(400, "Bad Request")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> AddItemToBasket(string basketId, string itemVariant, int quantity)
         {
             try
@@ -104,8 +100,9 @@
 
         [HttpGet]
         [Route("{basketId}/items/{itemId}", Name = nameof(GetBasketItemById))]
-        [SwaggerResponse(200, "Ok", typeof(Item))]
-        [SwaggerResponse(400, "Bad Request")]
+        [ProducesResponseType(typeof(Item), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public async Task<IActionResult> GetBasketItemById(string basketId, string itemId)
         {
             try
@@ -134,8 +131,9 @@
 
         [HttpPatch]
         [Route("{basketId}/items/{itemId}")]
-        [SwaggerResponse(200, "Ok", typeof(Item))]
-        [SwaggerResponse(404, "Not Found")]
+        [ProducesResponseType(typeof(Item), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public async Task<IActionResult> PatchBasketItem(string basketId, string itemId, [FromBody]JsonPatchDocument<Item> jsonPatchDocument)
         {
             try
