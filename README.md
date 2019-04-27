@@ -8,6 +8,7 @@ They should also be able to simply clear out all items from their order and star
 
 https://github.com/nhmendes/checkout-basket/blob/master/classdiagram.puml
 
+![Image description](https://github.com/nhmendes/checkout-basket/blob/master/classdiagram.png?raw=true)
 
 # API
 
